@@ -10,6 +10,7 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
+    @tasks = @note.tasks
   end
 
   # GET /notes/new
