@@ -1,4 +1,3 @@
-%h1 Moving Schedule
 %ol{class: 'calendar'}
   - @notes.each do |note|
     %li{class: "note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
