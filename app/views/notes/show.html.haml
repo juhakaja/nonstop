@@ -1,0 +1,27 @@
+%p#notice= notice
+%p
+  %strong Date:
+  = @note.date
+%p
+  %strong Done?:
+  = @note.done
+%p
+  %strong Notes:
+  = @note.notes
+%h2 Tasks
+%table
+  %thead
+    %tr
+      %th Indicator
+      %th Description
+      %th Details
+  %tbody
+    - @tasks.each do |task|
+      %tr
+        %td= task.indicator
+        %td= task.description
+        %td= task.details
+  %tbody
+= link_to 'Edit', edit_note_path(@note)
+|
+\#{link_to 'Back', notes_path}

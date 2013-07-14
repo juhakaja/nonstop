@@ -1,0 +1,10 @@
+%h1 Moving Schedule
+- @notes.each do |note|
+  %p= note.date
+  %b= note_done(note.date)
+  %table
+    %tbody
+      - note.tasks.each do |task|
+        %tr
+          %td= indicator_switch(task.indicator)
+          %td= task.description
