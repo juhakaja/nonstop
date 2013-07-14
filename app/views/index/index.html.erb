@@ -1,0 +1,15 @@
+<h1>Moving Schedule</h1>
+<% @notes.each do |note| %>
+  <p><%= note.date %></p>
+  <b><%= note_done(note.date) %></b>
+  <table>
+    <tbody>
+      <% note.tasks.each do |task| %>
+        <tr>
+          <td><%= indicator_switch(task.indicator) %></td>
+          <td><%= task.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
