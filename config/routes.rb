@@ -1,5 +1,4 @@
 Notes::Application.routes.draw do
-  get "index/index"
 
   resources :notes do
     resources :tasks
