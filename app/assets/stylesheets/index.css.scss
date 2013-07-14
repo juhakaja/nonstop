@@ -1,3 +1,59 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-size: 10px;
+}
+
+.ol.calendar { 
+  width: 1300px;
+  margin: 0 auto;
+  display: block; 
+  min-height: 100px;
+}
+
+li {
+  list-style: none;
+  width: 165px;
+  min-height: 100px;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  overflow: auto;
+  background: bottom right no-repeat;
+
+  &.note_Done {
+    color: red;
+
+    &.note_day_6,
+    &.note_day_0 {
+      color: pink;
+    }
+  }
+  
+  &.note_Todo {
+    color: green;
+
+    &.note_day_6,
+    &.note_day_0 {
+      color: lightgreen;
+    }
+  }
+}
+
+//  
+//  &.note_sat,
+//  &.note_sun {
+//    color: pink;
+//  }
+//}
+//
+//.note_Todo {
+//  color: green;
+//
+//  &.note_sat,
+//  &.note_sun {
+//    color: lightgreen;
+//  }
+//}

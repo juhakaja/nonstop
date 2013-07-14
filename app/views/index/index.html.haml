@@ -1,6 +1,7 @@
 %h1 Moving Schedule
-- @notes.each do |note|
-  .note[note]
-    %p= note.date
-    %b= note_done(note.date)
-    = render 'note_tasks', note: note
+%ol{class: 'calendar'}
+  - @notes.each do |note|
+    %li{class: "note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
+      %p= "#{note.date.strftime('%a')} - #{note.date}"
+      %b= note_done(note.date)
+      = render 'note_tasks', note: note

@@ -1,4 +1,4 @@
 - note.tasks.each do |task|
-  .task[task]
+  %div{class: "task_#{task.indicator}", id: "task_#{task.id}"}
     = indicator_switch(task.indicator)
     = task.description
