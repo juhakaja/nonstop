@@ -4,3 +4,4 @@
       %p= "#{note.date.strftime('%a')} - #{note.date}"
       %b= note_done(note.date)
       = render 'note_tasks', note: note
+      = render 'note_links', note: note
