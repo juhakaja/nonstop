@@ -18,10 +18,15 @@ li {
   width: 165px;
   min-height: 100px;
   float: left;
-  margin: 5px;
-  padding: 5px;
+  margin: 3px;
+  padding: 3px;
   overflow: auto;
-  background: bottom right no-repeat;
+  background: lightgrey bottom right no-repeat;
+
+  &.note_day_6,
+  &.note_day_0 {
+    background-color: grey;
+  }
 
   &.note_Done {
     color: red;
@@ -40,20 +45,8 @@ li {
       color: lightgreen;
     }
   }
-}
 
-//  
-//  &.note_sat,
-//  &.note_sun {
-//    color: pink;
-//  }
-//}
-//
-//.note_Todo {
-//  color: green;
-//
-//  &.note_sat,
-//  &.note_sun {
-//    color: lightgreen;
-//  }
-//}
+  &.note_Today {
+    background-color: yellow;
+  }
+}
