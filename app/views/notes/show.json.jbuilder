@@ -1,1 +1,1 @@
-json.extract! @note, :date, :title, :notes, :created_at, :updated_at
+json.extract! @note, :date, :done, :notes, :created_at, :updated_at

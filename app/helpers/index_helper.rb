@@ -1,6 +1,6 @@
 module IndexHelper
 
-  def note_title(title)
-    title ? "Done" : "Todo"
+  def note_title(done)
+    done ? "Done" : "Todo"
   end
 end
