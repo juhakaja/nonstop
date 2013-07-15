@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130714092101) do
+ActiveRecord::Schema.define(version: 20130715160556) do
 
   create_table "notes", force: true do |t|
-    t.date     "date",       null: false
-    t.boolean  "done",       null: false
+    t.date     "date",                       null: false
+    t.boolean  "done",       default: false, null: false
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20130714092101) do
 
   create_table "tasks", force: true do |t|
     t.integer  "note_id"
-    t.boolean  "indicator"
+    t.boolean  "indicator",   default: false
     t.string   "description"
     t.text     "details"
     t.datetime "created_at"
