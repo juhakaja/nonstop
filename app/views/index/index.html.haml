@@ -1,6 +1,6 @@
 %ol{class: 'calendar'}
   - @notes.each do |note|
-    %li{class: "note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
+    %li{class: "note_li note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
       %b= "#{note.date.strftime('%a')} - #{note.date}"
       = render 'note_tasks', note: note
       = render 'note_links', note: note

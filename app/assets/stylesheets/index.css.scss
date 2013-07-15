@@ -15,7 +15,7 @@ body {
   display: block; 
 }
 
-li {
+li.note_li {
   list-style: none;
   width: 165px;
   min-height: 170px;
@@ -32,20 +32,20 @@ li {
   }
 
   &.note_Done {
-    color: red;
+    background-color: pink;
 
     &.note_day_6,
     &.note_day_0 {
-      color: pink;
+      background-color: red;
     }
   }
   
   &.note_Todo {
-    color: green;
+    background-color: lightgreen;
 
     &.note_day_6,
     &.note_day_0 {
-      color: lightgreen;
+      background-color: green;
     }
   }
 
@@ -58,4 +58,23 @@ li {
     bottom: 0;
     font-size: 10px;
   }
+}
+
+ul.task_list { 
+  list-style: none; 
+  margin: 3px;
+}
+
+li.task_li.task_true:before { 
+  content:"\2022 \00A0"; 
+  color: red; 
+}
+
+li.task_li.task_false:before { 
+  content:"\2022 \00A0"; 
+  color: green; 
+}
+
+li.task_li.task_true {
+  text-decoration: line-through;
 }

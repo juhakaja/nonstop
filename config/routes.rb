@@ -1,5 +1,7 @@
 Notes::Application.routes.draw do
 
+  resources :tasks
+
   resources :notes do
     resources :tasks
   end

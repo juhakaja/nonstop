@@ -11,6 +11,6 @@ module NotesHelper
   end
 
   def indicator_switch(indicator)
-    indicator ? "x" : "-"
+    indicator ? "ok" : "not_ok"
   end
 end
