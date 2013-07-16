@@ -8,6 +8,8 @@ body {
 
 .container {
   width: 1300px;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .ol.calendar { 
@@ -55,8 +57,14 @@ li.note_li {
 
   .note_links {
     position: absolute;
+    width: 90%;
     bottom: 0;
     font-size: 10px;
+
+    .note_destroy {
+      float: right;
+      text-align: right;
+    }
   }
 }
 
@@ -77,4 +85,9 @@ li.task_li.task_false:before {
 
 li.task_li.task_true {
   text-decoration: line-through;
+}
+
+.create_note {
+  position: absolute;
+  bottom: 0;
 }

@@ -10,7 +10,7 @@
   .field
     = f.label :date
     %br/
-    = f.date_select :date
+    = f.text_field :date, value: Date.today
   .field
     = f.label :done?
     %br/
