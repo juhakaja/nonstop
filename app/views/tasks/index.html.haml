@@ -1,0 +1,22 @@
+%h1 Listing tasks
+%table
+  %thead
+    %tr
+      %th Date
+      %th Done?
+      %th Description
+      %th Details
+      %th
+      %th
+      %th
+  %tbody
+    - @tasks.each do |task|
+      %tr
+        %td= task.note.date
+        %td= task.done?
+        %td= task.description
+        %td= task.details
+        %td= link_to 'Show', note_task_path(task.note, task)
+        %td= link_to 'Edit', edit_note_task_path(task.note, task)
+        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+%br/

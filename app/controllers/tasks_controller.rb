@@ -2,6 +2,10 @@ class TasksController < ApplicationController
 
   before_filter :load_note
 
+  def index
+    @tasks = Task.all
+  end
+
   def new
     @task = @note.tasks.build
   end
@@ -23,7 +27,7 @@ class TasksController < ApplicationController
   private
 
   def load_note
-    @note = Note.find(params[:note_id])
+    @note = Note.find(params[:note_id]) unless params[:note_id].nil?
   end
 
   def task_params
