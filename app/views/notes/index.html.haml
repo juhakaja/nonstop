@@ -1,21 +1,4 @@
-%h1 Listing notes
-%table
-  %thead
-    %tr
-      %th Date
-      %th Done?
-      %th Notes
-      %th
-      %th
-      %th
-  %tbody
-    - @notes.each do |note|
-      %tr
-        %td= note.date
-        %td= note.done
-        %td= note.notes
-        %td= link_to 'Show', note
-        %td= link_to 'Edit', edit_note_path(note)
-        %td= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Note', new_note_path
+%ol{class: 'calendar'}
+  = render @notes
+.create_note
+  = link_to 'Create Note', new_note_path

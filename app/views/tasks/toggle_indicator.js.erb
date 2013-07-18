@@ -1,0 +1,3 @@
+$("#task_<%= @task.id %>").fadeOut('fast');
+$("#task_<%= @task.id %>").html( "<%= escape_javascript(render(@task)) %>");
+$("#task_<%= @task.id %>").fadeIn('fast');

@@ -1,3 +1,99 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-size: 10px;
+}
+
+.container {
+  width: 1300px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.ol.calendar { 
+  margin: 0 auto;
+  display: block; 
+}
+
+li.note_li {
+  list-style: none;
+  width: 165px;
+  min-height: 170px;
+  float: left;
+  margin: 3px;
+  padding: 3px;
+  overflow: auto;
+  background: lightgrey bottom right no-repeat;
+  position: relative;
+
+  &.note_day_6,
+  &.note_day_0 {
+    background-color: grey;
+  }
+
+  &.note_Done {
+    background-color: pink;
+
+    &.note_day_6,
+    &.note_day_0 {
+      background-color: red;
+    }
+  }
+  
+  &.note_Todo {
+    background-color: lightgreen;
+
+    &.note_day_6,
+    &.note_day_0 {
+      background-color: green;
+    }
+  }
+
+  &.note_Today {
+    background-color: yellow;
+  }
+
+  .note_links {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    font-size: 10px;
+
+    .note_destroy {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+ul.task_list { 
+  list-style: none; 
+  margin: 3px;
+}
+
+li.task_li.task_true {
+  text-decoration: line-through;
+}
+
+li.task_li.task_false {
+  text-decoration: none;
+}
+
+a.task_indicator.task_indicator_true { 
+  color: red; 
+}
+
+a.task_indicator.task_indicator_false { 
+  color: green; 
+}
+
+.create_note {
+  position: absolute;
+  bottom: 0;
+}

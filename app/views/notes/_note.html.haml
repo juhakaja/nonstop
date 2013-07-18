@@ -1,0 +1,5 @@
+%li{class: "note_li note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
+  %b= "#{note.date.strftime('%a')} - #{note.date}"
+  %ul.task_list
+    = render note.tasks
+  = render 'note_links', note: note
