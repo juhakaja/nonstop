@@ -1,0 +1,64 @@
+// Place all the styles related to the notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+li.note_li
+  list-style: none
+  width: 165px
+  min-height: 170px
+  float: left
+  margin: 3px
+  padding: 3px
+  overflow: auto
+  background: bottom right no-repeat
+  position: relative
+
+  &.note_Done
+    background-color: pink
+
+    &.note_day_6,
+    &.note_day_0
+      background-color: red
+  
+  &.note_Todo
+    background-color: lightgreen
+
+    &.note_day_6,
+    &.note_day_0
+      background-color: green
+
+  &.note_Today
+    background-color: yellow
+
+  .note_links
+    position: absolute
+    width: 90%
+    bottom: 0
+    font-size: 10px
+
+    .note_destroy
+      float: right
+      text-align: right
+
+ul.task_list
+  list-style: none
+  margin: 3px
+  text-decoration: none
+
+li.task_li.task_true
+  text-decoration: line-through
+
+a.task_indicator
+  &:hover
+    background-color: transparent
+    text-decoration: none
+
+  &.task_indicator_true
+    color: red
+
+  &.task_indicator_false
+    color: green
+
+.create_note
+  position: absolute
+  bottom: 0
