@@ -75,22 +75,26 @@ li.note_li {
 ul.task_list { 
   list-style: none; 
   margin: 3px;
+  text-decoration: none;
 }
 
 li.task_li.task_true {
   text-decoration: line-through;
 }
 
-li.task_li.task_false {
-  text-decoration: none;
-}
+a.task_indicator {
+  &:hover {
+    background-color: transparent;
+    text-decoration: none;
+  }
 
-a.task_indicator.task_indicator_true { 
-  color: red; 
-}
+  &.task_indicator_true { 
+    color: red; 
+  }
 
-a.task_indicator.task_indicator_false { 
-  color: green; 
+  &.task_indicator_false { 
+    color: green; 
+  }
 }
 
 .create_note {
