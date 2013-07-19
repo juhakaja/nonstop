@@ -35,6 +35,12 @@ class TasksController < ApplicationController
     end
   end
   
+  def flash_destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    respond_with(@task)
+  end
+
   def toggle_indicator
     @task = Task.find(params[:id])
     @task.toggle!(:indicator)  

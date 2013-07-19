@@ -2,6 +2,7 @@ Notes::Application.routes.draw do
 
   resources :tasks do
     get 'toggle_indicator', on: :member
+    get 'flash_destroy', on: :member
   end
 
   resources :notes do

@@ -1,3 +1,4 @@
 %li{class: "task_li task_#{task.indicator}", id: "task_#{task.id}"}
   = link_to "&#9679".html_safe, toggle_indicator_task_path(task), class: "task_indicator task_indicator_#{task.indicator}", id: "indicator_task_#{task.id}", remote: true
   = task.description
+  .task_destroy= link_to "x", flash_destroy_task_path(task), remote: true
