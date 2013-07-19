@@ -48,16 +48,18 @@ ul.task_list
 li.task_li.task_true
   text-decoration: line-through
 
+a.task_destroy,
 a.task_indicator
-  &:hover
-    background-color: transparent
-    text-decoration: none
-
   &.task_indicator_true
     color: red
 
   &.task_indicator_false
     color: green
+
+  &:hover
+    background-color: transparent
+    text-decoration: none
+    color: white
 
 .create_note
   position: absolute
