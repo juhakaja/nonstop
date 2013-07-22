@@ -10,20 +10,12 @@ class TasksController < ApplicationController
 
   def new
     @task = @note.tasks.build
+    respond_with(@task)
   end
 
   def create
-    @note.tasks.build(task_params)
-
-    respond_to do |format|
-      if @note.save
-        format.html { redirect_to notes_path, notice: 'Task was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @note }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @note.errors, status: :unprocessable_entity }
-      end
-    end
+    @task = @note.tasks.build(task_params)
+    respond_with(@task) if @note.save
   end
 
   def destroy

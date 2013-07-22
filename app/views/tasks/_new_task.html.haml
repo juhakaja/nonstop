@@ -1,0 +1,7 @@
+%li{id: "new_task_#{note.id}"}
+  - if add
+    = link_to "+", new_note_task_path(note), remote: true
+  - else
+    = form_for([note, note.tasks.build], remote: true) do |f|
+      .field
+        = f.text_field(:description, class: 'submittable')

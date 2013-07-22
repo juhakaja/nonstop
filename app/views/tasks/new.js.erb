@@ -1,0 +1,3 @@
+$("#new_task_<%= @note.id %>").fadeOut('fast');
+$("#new_task_<%= @note.id %>").html( "<%= escape_javascript(render('tasks/new_task', { note: @note, task: @task, add: false })) %>");
+$("#new_task_<%= @note.id %>").fadeIn('fast');

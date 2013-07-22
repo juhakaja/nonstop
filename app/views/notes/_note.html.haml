@@ -2,4 +2,5 @@
   %b= "#{note.date.strftime('%a')} - #{note.date}"
   %ul.task_list
     = render note.tasks
+    = render 'tasks/new_task', { note: note, add: true }
   = render 'note_links', note: note
