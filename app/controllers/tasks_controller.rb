@@ -8,6 +8,10 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  def show
+    @task = @note.tasks.find(params[:id])
+  end
+
   def new
     @task = @note.tasks.build
     respond_with(@task)

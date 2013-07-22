@@ -1,0 +1,15 @@
+%p#notice= notice
+%p
+  %strong Date:
+  = @note.date
+%p
+  %strong Indicator:
+  = @task.indicator
+%p
+  %strong Description:
+  = @task.description
+%p
+  %strong Details:
+  = @task.details
+|
+\#{link_to 'Back', notes_path}

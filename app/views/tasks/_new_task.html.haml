@@ -1,6 +1,6 @@
 %li{id: "new_task_#{note.id}"}
   - if add
-    = link_to "+", new_note_task_path(note), class: "task_new", remote: true
+    = link_to "+", new_note_task_path(note), class: "task_new", remote: true, title: 'add task', rel: 'tooltip'
   - else
     = form_for([note, note.tasks.build], remote: true) do |f|
       .field
