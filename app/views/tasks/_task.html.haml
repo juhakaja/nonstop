@@ -1,4 +1,4 @@
 %li{class: "task_li task_#{task.indicator}", id: "task_#{task.id}"}
-  = link_to "&#9679".html_safe, toggle_indicator_task_path(task), class: "task_indicator task_indicator_#{task.indicator}", id: "indicator_task_#{task.id}", remote: true, title: 'toggle done? -indicator', rel: 'tooltip'
-  = link_to task.description, note_task_path(task.note, task), class: "task_details", title: 'view task details', rel: 'tooltip'
-  = link_to "x", flash_destroy_task_path(task), class: "task_destroy", remote: true, title: 'destroy task', rel: 'tooltip'
+  = link_to "&#9679".html_safe, toggle_indicator_task_path(task), class: "task_indicator task_indicator_#{task.indicator}", id: "indicator_task_#{task.id}", remote: true, title: 'toggle done? -indicator'
+  = link_to task.description, note_task_path(task.note, task), class: "task_details", title: 'view task details'
+  = link_to "x", flash_destroy_task_path(task), class: "task_destroy", remote: true, title: 'destroy task'
