@@ -2,45 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-li.note_li
+li.note
   list-style: none
   width: 170px
-  min-height: 170px
   float: left
   margin: 3px
   padding: 3px
   overflow: auto
-  background: bottom right no-repeat
-  position: relative
 
-  &.note_Done
-    background-color: pink
+  &.weekday
+    text-align: center
+    font-weight: bold
+    background-color: lightblue
 
-    &.note_day_6,
-    &.note_day_0
-      background-color: red
-  
-  &.note_Todo
-    background-color: lightgreen
+  &.note_list
+    min-height: 170px
+    background: bottom right no-repeat
+    position: relative
 
-    &.note_day_6,
-    &.note_day_0
-      background-color: green
+    .note_header
+      text-align: center
+      font-weight: bold
 
-  &.note_Today
-    background-color: yellow
+    &.note_Done
+      background-color: pink
 
-  .note_links
-    position: absolute
-    float: right
-    text-align: right
-    width: 95%
-    bottom: 0
-    font-size: 12px
+      &.note_day_6,
+      &.note_day_0
+        background-color: red
+    
+    &.note_Todo
+      background-color: lightgreen
 
-    .note_destroy
+      &.note_day_6,
+      &.note_day_0
+        background-color: green
+
+    &.note_Today
+      background-color: yellow
+
+    .note_links
+      position: absolute
       float: right
       text-align: right
+      width: 95%
+      bottom: 0
+      font-size: 12px
+
+      .note_destroy
+        float: right
+        text-align: right
 
 ul.task_list
   list-style: none

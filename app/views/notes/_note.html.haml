@@ -1,5 +1,5 @@
-%li{class: "note_li note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
-  %b= "#{note.date.strftime('%a')} - #{note.date}"
+%li{class: "note note_list note_day_#{note.date.wday} note_#{note_done(note.date)}", id: "note_#{note.id}"}
+  .note_header= note_header(note)
   %ul.task_list
     = render note.tasks
     = render 'tasks/new_task', { note: note, add: true }

@@ -4,6 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
+    @weekdays = Note.first(7).map(&:weekday)
     @notes = Note.order(:date)
   end
 
